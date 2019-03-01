@@ -1,0 +1,351 @@
+{% load staticfiles %}
+
+<!--DOCTYPE html-->
+
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Smart India Hackathon
+  </title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/scrolling-nav.css' %}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Smart India Hackathon 2019</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#ideas">Idea</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Team</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white">
+    <div class="container text-center">
+      <h1>Inconsistencies in Medical Annotations</h1>
+      <p class="lead"></p>
+    </div>
+  </header>
+
+
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>About</h2>
+          <h1></h1>
+          <p class="lead">
+            Organization name: ezDI
+            </p>
+            <p class="lead">
+            Technology bucket: Healthcare & Biomedical Devices
+            </p>
+            <p class="lead">
+            Team name: TeamCoders6
+            </p>
+            <p class="lead">
+            Team Leader Name: Paras Narendranath
+            </p>
+            <p class="lead">
+            Problem: Inconsistency Detection in Medical Annotation
+            </p>
+            <p class="lead">
+            Problem Code: RG1
+            </p>
+            <p class="lead">
+            College Code: 1-3516083173
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ideas" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Idea</h2>
+          <ul>
+            <li>Use Mesh topology to find similar terms in the corpus which are differently annotated(eg: Hypertension and High blood pressure
+are synonyms but could be annotated differently leaving inconsistency).</li>
+
+            <li>Terms in each document are mapped to the entry terms in MeSH, which are further then mapped into MeSH descriptors to remove
+synonyms.</li>
+
+            <li>Instead of searching all entry terms in the MeSH against each document, we select 1-gram to 5-gram words as the candidates of MeSH Entry terms.</li>
+
+            <li>Implement the Watson Natural Language Understanding API, to extract Concepts from the entities(eg: High blood pressure has Hypertension as concept). Grouping similar entities using MeSH and Watson Natural Language Understanding API based on their semantic similarity.</li>
+            <li>Finding out weight discrepancy to extract the extent of inconsistency for each grouped entity i.e. difference between the number of times an expression M occurs is annotated minus the number of times M occurs is not annotated. </li>
+            <li>More is the weight discrepancy lesser is the extent of inconsistency</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Services : </h2>
+
+
+
+          <div id="special" style = "position:relative;">
+          <button onclick="location.href='/stats'" type="button" class="btn btn-primary btn-lg">
+            See Statistics
+          </button>
+          </div>
+          <!--
+          <p class="lead">
+            Data display :</br>
+            {{ Data1.firstdata }}
+            </br>
+            {{ Data1.secondata}}
+            </br>
+            {{Data2}}
+
+          </p>
+
+          Sample display of data : change later
+        -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section  id="contact" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Our Team</h2>
+          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img height="250" width="250" class="mx-auto rounded-circle" src="static/img/team/1.jpg" alt="">
+            <h4 style = "position:relative; left:20px ;">Paras Narendranath</h4>
+            <p style = "position:relative; left:70px ;" class="text-muted">Team Leader</p>
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img height="250" width="250" class="mx-auto rounded-circle" src="static/img/team/2.jpg" alt="">
+            <h4  style = "position:relative; left:40px ;" >Anurag Pachauri</h4>
+            <p  style = "position:relative; left:100px ;" class="text-muted">Member</p>
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img height="250" width="250" class="mx-auto rounded-circle" src="static/img/team/3.jpg" alt="">
+            <h4 style = "position:relative; left:50px ;" >Diana Pertersen</h4>
+            <p  style = "position:relative; left:50px ;" class="text-muted">Lead Developer</p>
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img height="250" width="250" class="mx-auto rounded-circle" src="static/img/team/1.jpg" alt="">
+            <h4 style = "position:relative; left:70px ;" >Kay Garland</h4>
+            <p  style = "position:relative; left:70px ;" class="text-muted">Lead Designer</p>
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img height="250" width="250" class="mx-auto rounded-circle" src="static/img/team/2.jpg" alt="">
+            <h4 style = "position:relative; left:70px ;" >Larry Parker</h4>
+            <p  style = "position:relative; left:70px ;" class="text-muted">Lead Marketer</p>
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img height="250" width="250" class="mx-auto rounded-circle" src="static/img/team/3.jpg" alt="">
+            <h4 style = "position:relative; left:50px ;" >Diana Pertersen</h4>
+            <p  style = "position:relative; left:50px ;" class="text-muted">Lead Developer</p>
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Website by : TeamCoders6</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js'}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'}"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js'}"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="{% static 'js/scrolling-nav.js'}"></script>
+
+</body>
+
+</html>
